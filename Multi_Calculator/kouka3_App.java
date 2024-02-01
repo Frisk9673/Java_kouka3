@@ -11,7 +11,7 @@ public class kouka3_App {
             double num1 = getValidNumber(scanner);
 
             //ユーザに演算子を指定させる
-            System.out.print("利用する演算子を指定してください。\n 足し算・引き算・掛け算・割り算・剰余・べき乗・対数\n平方根・階乗・円の面積\n (+, -, *, /, %, ^, log, sqrt, !, circlearea)\n 利用する演算子：");
+            System.out.print("利用する演算子を指定してください。\n足し算・引き算・掛け算・割り算・剰余・べき乗・対数\n平方根・階乗・円の面積・球の体積\n(+, -, *, /, %, ^, log, sqrt, !, circlearea, spherevolume)\n※ 余剰は余りの数値のみ表示されます\n 利用する演算子：");
             String operator = scanner.next();
 
             //二項演算か単項演算かによって処理を分岐
