@@ -11,7 +11,7 @@ public class kouka3_App {
             double num1 = getValidNumber(scanner);
 
             //ユーザに演算子を指定させる
-            System.out.print("利用する演算子を指定してください。\n 足し算・引き算・掛け算・割り算・べき乗・対数\nサイン・コサイン・タンジェント・平方根・階乗・円の面積\n (+, -, *, /, ^, log, sin, cos, tan, sqrt, !, circlearea)\n 利用する演算子：");
+            System.out.print("利用する演算子を指定してください。\n 足し算・引き算・掛け算・割り算・剰余・べき乗・対数\n平方根・階乗・円の面積\n (+, -, *, /, %, ^, log, sqrt, !, circlearea)\n 利用する演算子：");
             String operator = scanner.next();
 
             //二項演算か単項演算かによって処理を分岐
@@ -60,14 +60,13 @@ public class kouka3_App {
 
     //二項演算子かどうかを判定するメソッド
     private static boolean isBinaryOperator(String operator) {
-        return operator.equals("+") || operator.equals("-") || operator.equals("*") ||
-               operator.equals("/") || operator.equals("^") || operator.equals("log");
+        return operator.equals("+") || operator.equals("-") || operator.equals("*") ||operator.equals("/") || 
+                operator.equals("%") || operator.equals("^") || operator.equals("log");
     }
 
     //単項演算子かどうかを判定するメソッド
     private static boolean isUnaryOperator(String operator) {
-        return operator.equals("sin") || operator.equals("cos") || operator.equals("tan") ||
-               operator.equals("sqrt") || operator.equals("!") || operator.equals("circlearea");
+        return operator.equals("sqrt") || operator.equals("!") || operator.equals("circlearea");
     }
 
     //二項演算子を実行するメソッド
@@ -113,6 +112,9 @@ public class kouka3_App {
             //割り算のケース
             case "/":
                 return new Devide();
+            //剰余のケース
+            case "%":
+                return new Surplus();
             //べき乗のケース
             case "^":
                 return new Power();
@@ -128,21 +130,13 @@ public class kouka3_App {
     //単項演算のオブジェクトを取得するメソッド
     private static Operation getUnaryOperation(String operator) {
         switch (operator) {
-            case "sin":
-            return new Trigonometry();
-
-            case "cos":
-            return new Trigonometry();
-
-            case "tan":
-            return new Trigonometry();
-            
+            //平方根のケース            
             case "sqrt":
             return new SquareRoot();
-
+            //階乗のケース
             case "!":
             return new Factorial();
-
+            //円の面積のケース
             case "circlearea":
             return new CircleArea();
             //デフォルト(空白)
