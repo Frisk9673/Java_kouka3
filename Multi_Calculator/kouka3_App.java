@@ -14,7 +14,7 @@ public class kouka3_App {
             System.out.print("利用する演算子を指定してください。\n 足し算・引き算・掛け算・割り算・べき乗・対数\nサイン・コサイン・タンジェント・平方根・階乗・円の面積\n (+, -, *, /, ^, log, sin, cos, tan, sqrt, !, circlearea)\n 利用する演算子：");
             String operator = scanner.next();
 
-            //二項演算か一項演算かによって処理を分岐
+            //二項演算か単項演算かによって処理を分岐
             //二項演算の場合
             if (isBinaryOperator(operator)) {
                 //ユーザに二番目の数の入力を促す
@@ -24,9 +24,9 @@ public class kouka3_App {
                 //二項演算を実行させる
                 executeBinaryOperation(operator, num1, num2);
             }
-            //一項演算の場合 
+            //単項演算の場合 
             else if (isUnaryOperator(operator)) {
-                //一項演算を実行させる
+                //単項演算を実行させる
                 executeUnaryOperation(operator, num1);
             } 
             //設定してない演算子が入力された場合
@@ -64,7 +64,7 @@ public class kouka3_App {
                operator.equals("/") || operator.equals("^") || operator.equals("log");
     }
 
-    //一項演算子かどうかを判定するメソッド
+    //単項演算子かどうかを判定するメソッド
     private static boolean isUnaryOperator(String operator) {
         return operator.equals("sin") || operator.equals("cos") || operator.equals("tan") ||
                operator.equals("sqrt") || operator.equals("!") || operator.equals("circlearea");
@@ -84,7 +84,7 @@ public class kouka3_App {
         }
     }
 
-    //一項演算子を実行するメソッド
+    //単項演算子を実行するメソッド
     private static void executeUnaryOperation(String operator, double num1) {
         Operation operation = getUnaryOperation(operator);
         //operationがnullでない場合の処理
@@ -125,7 +125,7 @@ public class kouka3_App {
         }
     }
 
-    //一項演算のオブジェクトを取得するメソッド
+    //単項演算のオブジェクトを取得するメソッド
     private static Operation getUnaryOperation(String operator) {
         switch (operator) {
             case "sin":
