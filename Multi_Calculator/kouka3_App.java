@@ -8,10 +8,12 @@ public class kouka3_App {
         try {
             //1つ目の数値の入力をさせる
             System.out.print("1つ目の数値を入力してください：");
+            //変数num1に1つ目に入力した数値を入れる
             double num1 = getValidNumber(scanner);
 
             //ユーザに演算子を指定させる
             System.out.print("利用する演算子を指定してください。\n足し算・引き算・掛け算・割り算・剰余・べき乗・対数\n平方根・階乗・円の面積・球の体積\n(+, -, *, /, %, ^, log, sqrt, !, circlearea, sphere)\n※ 余剰は余りの数値のみ表示されます\n 利用する演算子：");
+            //変数operatorに入力した演算子を入れる(この後に入力したものに応じて演算処理をさせる)
             String operator = scanner.next();
 
             //二項演算か単項演算かによって処理を分岐
@@ -19,6 +21,7 @@ public class kouka3_App {
             if (isBinaryOperator(operator)) {
                 //ユーザに二番目の数の入力を促す
                 System.out.print("2つ目の数値を入力してください：");
+                //変数num2に2つ目に入力した数値を入れる
                 double num2 = getValidNumber(scanner);
             
                 //二項演算を実行させる
@@ -26,7 +29,7 @@ public class kouka3_App {
             }
             //単項演算の場合 
             else if (isUnaryOperator(operator)) {
-                //単項演算を実行させる
+                //単項演算を実行させる(num2は単項演算では使わないので記述しない)
                 executeUnaryOperation(operator, num1);
             } 
             //設定してない演算子が入力された場合
