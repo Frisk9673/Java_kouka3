@@ -78,6 +78,7 @@ public class kouka3_App {
         Operation operation = getBinaryOperation(operator);
         //operationがnullでない場合の処理
         if (operation != null) {
+            //変数resultにOperation内の上書きされた演算結果を入れる
             double result = operation.operate(num1, num2);
             System.out.println("結果: " + result);
         }
