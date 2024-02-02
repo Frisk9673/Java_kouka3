@@ -1,6 +1,7 @@
 package Multi_Calculator;
 //円の面積を求める演算クラス
 public class CircleArea extends UnaryOperation {
+    //Overrideで上書きをする
     @Override
     //円の面積の演算を実行するメソッド
     public double operate(double num1, double num2) {

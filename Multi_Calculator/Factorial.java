@@ -1,7 +1,7 @@
 package Multi_Calculator;
 //階乗の演算クラス
 public class Factorial extends UnaryOperation {
-    //Overrideでインターフェースを上書きする
+    //Overrideで上書きをする
     @Override
     //階乗の演算を実行するメソッド
     public double operate(double num1, double num2) {

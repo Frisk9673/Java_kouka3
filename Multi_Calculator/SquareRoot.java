@@ -1,7 +1,7 @@
 package Multi_Calculator;
 //平方根の演算クラス
 public class SquareRoot extends UnaryOperation {
-    //Overrideでインターフェースを上書きする
+    //Overrideで上書きをする
     @Override
     /*平方根の計算では引数は1つしか使わないので
     num2は入れないようにする*/

@@ -1,7 +1,7 @@
 package Multi_Calculator;
 //対数の演算クラス
 public class Logarithm extends BinaryOperation {
-    //Overrideでインターフェースを上書きする
+    //Overrideで上書きをする
     @Override
     //対数の演算を実行するメソッド
     public double operate(double num1, double num2) {

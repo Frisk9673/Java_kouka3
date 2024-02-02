@@ -11,7 +11,7 @@ public class kouka3_App {
             double num1 = getValidNumber(scanner);
 
             //ユーザに演算子を指定させる
-            System.out.print("利用する演算子を指定してください。\n足し算・引き算・掛け算・割り算・剰余・べき乗・対数\n平方根・階乗・円の面積・球の体積\n(+, -, *, /, %, ^, log, sqrt, !, circlearea, spherevolume)\n※ 余剰は余りの数値のみ表示されます\n 利用する演算子：");
+            System.out.print("利用する演算子を指定してください。\n足し算・引き算・掛け算・割り算・剰余・べき乗・対数\n平方根・階乗・円の面積・球の体積\n(+, -, *, /, %, ^, log, sqrt, !, circlearea, sphere)\n※ 余剰は余りの数値のみ表示されます\n 利用する演算子：");
             String operator = scanner.next();
 
             //二項演算か単項演算かによって処理を分岐
@@ -66,7 +66,7 @@ public class kouka3_App {
 
     //単項演算子かどうかを判定するメソッド
     private static boolean isUnaryOperator(String operator) {
-        return operator.equals("sqrt") || operator.equals("!") || operator.equals("circlearea");
+        return operator.equals("sqrt") || operator.equals("!") || operator.equals("circlearea") || operator.equals("sphere");
     }
 
     //二項演算子を実行するメソッド
@@ -139,6 +139,9 @@ public class kouka3_App {
             //円の面積のケース
             case "circlearea":
             return new CircleArea();
+            //球の体積のケース
+            case "sphere":
+            return new SphereVolume();
             //デフォルト(空白)
             default:
                 return null;

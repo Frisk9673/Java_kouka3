@@ -1,7 +1,7 @@
 package Multi_Calculator;
 //足し算の演算クラス
 public class Add extends BinaryOperation {
-    //Overrideでインターフェースを上書きする
+    //Overrideで上書きをする
     @Override
     //足し算を実行するメソッド
     public double operate(double num1, double num2) {

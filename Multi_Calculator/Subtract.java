@@ -1,7 +1,7 @@
 package Multi_Calculator;
 //引き算の演算クラス
 public class Subtract extends BinaryOperation {
-    //Overrideでインターフェースを上書きする
+    //Overrideで上書きをする
     @Override
     //引き算を実行するメソッド
     public double operate(double num1, double num2) {

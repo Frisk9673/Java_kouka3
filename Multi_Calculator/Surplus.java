@@ -1,7 +1,7 @@
 package Multi_Calculator;
 //剰余の演算クラス
 public class Surplus extends BinaryOperation {
-    //Overrideでインターフェースを上書きする
+    //Overrideで上書きをする
     @Override
     //剰余の演算を実行するメソッド
     public double operate(double num1, double num2) {

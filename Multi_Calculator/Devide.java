@@ -1,7 +1,7 @@
 package Multi_Calculator;
 //割り算の演算クラス
 public class Devide extends BinaryOperation {
-    //Overrideでインターフェースを上書きする
+    //Overrideで上書きをする
     @Override
     //割り算を実行するメソッド
     public double operate(double num1, double num2) {
