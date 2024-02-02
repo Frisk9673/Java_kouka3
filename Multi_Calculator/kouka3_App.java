@@ -62,7 +62,7 @@ public class kouka3_App {
     //二項演算子かどうかを判定するメソッド
     private static boolean isBinaryOperator(String operator) {
         return operator.equals("+") || operator.equals("-") || operator.equals("*") ||operator.equals("/") || 
-                operator.equals("%") || operator.equals("^") || operator.equals("log");
+               operator.equals("%") || operator.equals("^") || operator.equals("log");
     }
 
     //単項演算子かどうかを判定するメソッド
