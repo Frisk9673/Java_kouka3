@@ -5,8 +5,9 @@ public class CircleArea extends UnaryOperation {
     @Override
     //円の面積の演算を実行するメソッド
     public double operate(double num1, double num2) {
-        if (num1 <= 0 || num2 != 0) {
-            throw new IllegalArgumentException("円の面積演算は正の半径を1つだけ使います。\nお手数ですが入力する値をどちらか0にして入力し直してください。");
+        //num1が0以下の場合はエラーメッセージを表示させる
+        if (num1 <= 0) {
+            throw new IllegalArgumentException("円の面積の演算を実行するには1つ目の数値が1以上である必要があります。");
         }
         //returnでMath.PI(3.14) * Math.pow(num1, 2)を返す
         return Math.PI * Math.pow(num1, 2);

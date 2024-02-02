@@ -5,7 +5,7 @@ public class Devide extends BinaryOperation {
     @Override
     //割り算を実行するメソッド
     public double operate(double num1, double num2) {
-        //num2に0が入力された場合のif文を用意する
+        //num2に0が入力された場合のエラーメッセージを表示させる
         if (num2 == 0) {
             throw new ArithmeticException("0で割ることはできません！");
         }

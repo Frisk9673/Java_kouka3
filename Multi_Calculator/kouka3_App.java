@@ -35,7 +35,7 @@ public class kouka3_App {
                 System.out.println("サポートされていない演算子です。");
             }
         }
-        //エラーが発生したらcatchする 
+        //エラーが発生したらcatchしてエラーメッセージを表示する 
         catch (Exception e) {
             //エラーメッセージを表示
             System.out.println("エラーが発生しました: " + e.getMessage());
@@ -45,6 +45,7 @@ public class kouka3_App {
             scanner.close();
         }
     }
+    //数値を入力する際、数値以外が入力された場合の例外処理を作成
     private static double getValidNumber(Scanner scanner) {
         while (true) {
             try {
