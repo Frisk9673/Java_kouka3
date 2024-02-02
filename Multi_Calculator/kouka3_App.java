@@ -113,7 +113,7 @@ public class kouka3_App {
             //割り算のケース
             case "/":
                 return new Devide();
-            //剰余のケース
+            //余剰のケース
             case "%":
                 return new Surplus();
             //べき乗のケース

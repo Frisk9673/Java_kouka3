@@ -1,5 +1,5 @@
 package Multi_Calculator;
-//剰余の演算クラス
+//余剰の演算クラス
 public class Surplus extends BinaryOperation {
     //Overrideで上書きをする
     @Override
